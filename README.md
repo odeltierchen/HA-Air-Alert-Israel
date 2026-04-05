@@ -23,9 +23,8 @@ Zusätzlich gibt es pro Stadt einen Diagnose-Binary-Sensor zur Kontrolle der Web
 
 Logik:
 
-- `early_warning` bleibt aktiv, bis `all_clear` kommt
-- Falls keine Entwarnung ankommt, fällt `early_warning` standardmäßig ** nach 15 Minuten** auf `idle`
-- `alert` hat ebenfalls einen Fallback-Timer
+- `early_warning` bleibt aktiv, bis `alert` oder `all_clear` kommt
+- `alert` wartet ebenfalls `all_clear` und ignoriert weitere Meldungen von `early_warning`
 - `all_clear` wird kurz angezeigt und fällt dann auf `idle`
 
 ## Reconfigure
