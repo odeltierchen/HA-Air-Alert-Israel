@@ -1,7 +1,9 @@
 # Air Alert Israel (AAI) for Home Assistant
 (erstellt mit ChatGPT)
 
-Integration, die nicht von den IP-Beschränkungen der OREF Alerts abhängig, und so auch für Personen außerhalb von Israel nutzbar ist.
+**Die Integration dient reinen Informationszwecken! Treffen Sie niemals sicherheitsrelevante Entscheidungen auf Basis der angezeigten Informationen!** 
+
+Integration, die nicht von den IP-Beschränkungen der OREF Alerts abhängig, und so auch für Personen außerhalb von Israel nutzbar ist. Alle Informationen stammen von https://www.tzevaadom.co.il/
 
 - Sichtbarer Name: **Air Alert Israel**
 - Mehrstadt-Betrieb über **eine** WebSocket-Verbindung
@@ -29,7 +31,3 @@ Logik:
 ## Reconfigure
 
 Über **Neu konfigurieren** können Städte entfernt oder zusätzliche Städte gesucht und hinzugefügt werden.
-
-## Service
-
-- `tzevaadom_city.refresh_city_catalog`
