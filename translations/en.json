@@ -1,0 +1,78 @@
+{
+  "title": "Air Alert Israel",
+  "config": {
+    "flow_title": "Air Alert Israel",
+    "step": {
+      "user": {
+        "title": "Add cities",
+        "description": "Search the city catalog by Hebrew, English, or common Latin spellings. Already selected: {selected}",
+        "data": {
+          "city_search": "City search"
+        }
+      },
+      "pick_cities": {
+        "title": "Select cities",
+        "description": "Results for “{query}”. Already selected: {selected}",
+        "data": {
+          "picked_cities": "Cities",
+          "search_more": "Search for more cities after this"
+        }
+      },
+      "reconfigure": {
+        "title": "Manage monitored cities",
+        "description": "Keep the cities you still want to monitor. Current selection: {selected}",
+        "data": {
+          "keep_cities": "Cities to keep",
+          "search_more": "Search for additional cities"
+        }
+      }
+    },
+    "error": {
+      "cannot_load_city_catalog": "Could not load the city catalog.",
+      "no_city_matches": "No city matches your search.",
+      "pick_one_city": "Pick at least one city.",
+      "at_least_one_city": "At least one city must remain configured."
+    },
+    "abort": {
+      "already_configured": "Air Alert Israel is already configured.",
+      "reconfigure_successful": "Air Alert Israel was reconfigured successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "include_nationwide": "Match nationwide alerts to all configured cities",
+          "early_warning_idle_after": "Early warning fallback to idle after",
+          "alert_idle_after": "Alert fallback to idle after",
+          "all_clear_idle_after": "Show all clear for"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "city_status": {
+        "name": "Status",
+        "state": {
+          "idle": "Idle",
+          "early_warning": "Early warning",
+          "alert": "Alert",
+          "all_clear": "All clear"
+        }
+      }
+    },
+    "binary_sensor": {
+      "city_connection": {
+        "name": "Connection"
+      }
+    }
+  },
+  "services": {
+    "refresh_city_catalog": {
+      "name": "Refresh city catalog",
+      "description": "Download the latest city catalog and save it locally."
+    }
+  }
+}

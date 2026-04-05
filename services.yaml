@@ -1,0 +1,3 @@
+refresh_city_catalog:
+  name: Refresh city catalog
+  description: Download the latest city catalog and store it in Home Assistant.

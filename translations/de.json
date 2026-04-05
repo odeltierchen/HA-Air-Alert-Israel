@@ -1,0 +1,78 @@
+{
+  "title": "Air Alert Israel",
+  "config": {
+    "flow_title": "Air Alert Israel",
+    "step": {
+      "user": {
+        "title": "Städte hinzufügen",
+        "description": "Durchsuche den Städtekatalog auf Hebräisch, Englisch oder gängigen lateinischen Schreibweisen. Bereits ausgewählt: {selected}",
+        "data": {
+          "city_search": "Stadtsuche"
+        }
+      },
+      "pick_cities": {
+        "title": "Städte auswählen",
+        "description": "Treffer für „{query}“. Bereits ausgewählt: {selected}",
+        "data": {
+          "picked_cities": "Städte",
+          "search_more": "Danach weitere Städte suchen"
+        }
+      },
+      "reconfigure": {
+        "title": "Überwachte Städte verwalten",
+        "description": "Behalte die Städte, die weiter überwacht werden sollen. Aktuelle Auswahl: {selected}",
+        "data": {
+          "keep_cities": "Zu behaltende Städte",
+          "search_more": "Zusätzliche Städte suchen"
+        }
+      }
+    },
+    "error": {
+      "cannot_load_city_catalog": "Der Städtekatalog konnte nicht geladen werden.",
+      "no_city_matches": "Keine Stadt passt zur Suche.",
+      "pick_one_city": "Wähle mindestens eine Stadt aus.",
+      "at_least_one_city": "Es muss mindestens eine Stadt konfiguriert bleiben."
+    },
+    "abort": {
+      "already_configured": "Air Alert Israel ist bereits eingerichtet.",
+      "reconfigure_successful": "Air Alert Israel wurde erfolgreich neu konfiguriert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen",
+        "data": {
+          "include_nationwide": "Landesweite Meldungen auf alle konfigurierten Städte anwenden",
+          "early_warning_idle_after": "Early Warning frühestens nach dieser Zeit auf Idle setzen",
+          "alert_idle_after": "Alert nach dieser Zeit auf Idle setzen",
+          "all_clear_idle_after": "All Clear so lange anzeigen"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "city_status": {
+        "name": "Status",
+        "state": {
+          "idle": "Leerlauf",
+          "early_warning": "Vorwarnung",
+          "alert": "Alarm",
+          "all_clear": "Entwarnung"
+        }
+      }
+    },
+    "binary_sensor": {
+      "city_connection": {
+        "name": "Verbindung"
+      }
+    }
+  },
+  "services": {
+    "refresh_city_catalog": {
+      "name": "Städtekatalog aktualisieren",
+      "description": "Lädt den aktuellen Städtekatalog herunter und speichert ihn lokal."
+    }
+  }
+}
