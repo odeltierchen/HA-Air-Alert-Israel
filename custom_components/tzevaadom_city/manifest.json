@@ -1,7 +1,7 @@
 {
   "domain": "tzevaadom_city",
   "name": "Air Alert Israel",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "config_flow": true,
   "integration_type": "service",
   "documentation": "https://www.tzevaadom.co.il/en/",
