@@ -1,4 +1,7 @@
 # Air Alert Israel (AAI) for Home Assistant
+(erstellt mit ChatGPT)
+
+Integration, die nicht von den IP-Beschränkungen der OREF Alerts abhängig, und so auch für Personen außerhalb von Israel nutzbar ist.
 
 - Sichtbarer Name: **Air Alert Israel**
 - Mehrstadt-Betrieb über **eine** WebSocket-Verbindung
