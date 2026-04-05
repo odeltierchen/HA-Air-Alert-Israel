@@ -409,17 +409,10 @@ class TzevaAdomRuntime:
         if existing is not None:
             existing.cancel()
 
-        if state == STATE_IDLE:
+        if state != STATE_ALL_CLEAR:
             return
 
-        if state == STATE_EARLY_WARNING:
-            delay = self.early_warning_idle_after
-        elif state == STATE_ALERT:
-            delay = self.alert_idle_after
-        elif state == STATE_ALL_CLEAR:
-            delay = self.all_clear_idle_after
-        else:
-            return
+        delay = self.all_clear_idle_after
 
         self._reset_tasks[city_id] = self.hass.async_create_task(
             self._async_reset_later(city_id, state, token, delay)
